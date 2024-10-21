@@ -1,0 +1,7 @@
+Numbers: 
+2000
+33
+Operations: 
++
+-
+/
