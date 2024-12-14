@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Функция для вывода первых n значений номеров из списка
+
 void print_list_numbers(const list<Mainclass>& lst, int n, const string& description) {
     cout << description << " (показывается до " << n << " элементов):" << endl;
     auto it = lst.begin();
@@ -18,8 +18,6 @@ void print_list_numbers(const list<Mainclass>& lst, int n, const string& descrip
     }
     cout << endl;
 }
-
-// Функция для вывода первых n пар элементов
 void print_list_pairs(const list<pair<Mainclass, Mainclass>>& lst, int n, const string& description) {
     cout << description << " (показывается до " << n << " пар):" << endl;
     auto it = lst.begin();
@@ -28,6 +26,10 @@ void print_list_pairs(const list<pair<Mainclass, Mainclass>>& lst, int n, const 
     }
     cout << endl;
 }
+
+
+
+
 
 int main() {
     SetConsoleCP(65001);
@@ -123,6 +125,5 @@ int main() {
         return make_pair(a, b);
     });
     cout << "Пары созданы из v1 и v2 без изменения размеров. Всего пар: " << pairs.size() << "." << endl;
-
     return 0;
 }
