@@ -100,6 +100,13 @@ int main() {
     print_list_numbers(list2, 10, "Первые 10 чисел из List2 после удаления нечетных");
 
     // 8. Создать вектор v3 с общими элементами из v1 и v2
+    // ОБЯЗАТЕЛЬНА СОРТИРОВКА
+    sort(v1.begin(), v1.end(), [](const Mainclass& a, const Mainclass& b) {
+    return *(a.get_number()) < *(b.get_number());
+    });
+    sort(v2.begin(), v2.end(), [](const Mainclass& a, const Mainclass& b) {
+        return *(a.get_number()) < *(b.get_number());
+    });
     vector<Mainclass> v3;
     set_intersection(v1.begin(), v1.end(), v2.begin(), v2.end(), back_inserter(v3),
         [](const Mainclass& a, const Mainclass& b) { return *(a.get_number()) < *(b.get_number()); });
